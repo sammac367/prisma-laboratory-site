@@ -74,11 +74,10 @@ section h2 {
 
 /* Герой-секция */
 
-/* Герой-секция */
 .hero {
     background: 
         linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-        url(Airbrush-IMAGE-ENHANCER-1780128478312-1780128478312.jpg);
+        url(images/Airbrush-IMAGE-ENHANCER-1780128478312-1780128478312.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -90,10 +89,12 @@ section h2 {
     min-height: 100vh;
 }
 
-/* Отдельно для iPad и iPhone — убираем fixed, который ломает отображение */
+/* Специально для iPad — отключаем всё лишнее */
 @supports (-webkit-touch-callout: none) {
     .hero {
         background-attachment: scroll;
+        background-size: cover;
+        background-position: center;
     }
 }
 
@@ -853,13 +854,7 @@ footer {
                 font-size: 1.8rem;
             }
         }
-/* 
-.hero {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-} */
+
 body {
     background: linear-gradient(135deg, #f5f7fa 0%, #eef2f7 100%);
     background-image: 
@@ -935,21 +930,6 @@ body {
     pointer-events: none;
 }
 
-/* Hero-секция — плавное увеличение фона при загрузке */
-.hero {
-    animation: heroZoom 1.5s ease-out;
-}
-
-@keyframes heroZoom {
-    from {
-        transform: scale(1.05);
-        opacity: 0;
-    }
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
 
 /* Кнопка "Узнать больше" с эффектом пульсации */
 .btn {
