@@ -74,6 +74,7 @@ section h2 {
 
 /* Герой-секция */
 
+/* Герой-секция */
 .hero {
     background: 
         linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
@@ -87,6 +88,13 @@ section h2 {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+}
+
+/* Отдельно для iPad и iPhone — убираем fixed, который ломает отображение */
+@supports (-webkit-touch-callout: none) {
+    .hero {
+        background-attachment: scroll;
+    }
 }
 
 .container-1 {
@@ -845,13 +853,13 @@ footer {
                 font-size: 1.8rem;
             }
         }
-
+/* 
 .hero {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
+} */
 body {
     background: linear-gradient(135deg, #f5f7fa 0%, #eef2f7 100%);
     background-image: 
